@@ -19,17 +19,18 @@ def build_vocabulary(D):
 
 
 def compute_counts(D, vocabulary):
-    matrix = np.array([[0] * len(vocabulary) for _ in range(len(D))])
+    vocabulary_index = {token: index for index, token in enumerate(vocabulary)}
+    matrix = np.zeros((len(D), len(vocabulary)), dtype=int)
     for i, doc in enumerate(D):
         for token in doc.split():
-            if token in vocabulary:
-                j = vocabulary.index(token)
+            j = vocabulary_index.get(token)
+            if j is not None:
                 matrix[i, j] += 1
     return matrix
 
 
 def compute_tf(count_matrix):
-    count_matrix = np.array(count_matrix, dtype=float)
+    count_matrix = np.array(count_matrix, dtype=float, copy=True)
     for i in count_matrix:
         total_count = np.sum(i)
         if total_count > 0:
@@ -38,11 +39,12 @@ def compute_tf(count_matrix):
 
 
 def compute_idf(count_matrix):
-    df_vecto = np.array([0] * count_matrix.shape[1])
-    for i in count_matrix:
-        df_vecto += i
-    idf_vecto = np.log(count_matrix.shape[0] / df_vecto)
-    return idf_vecto
+    count_matrix = np.asarray(count_matrix)
+    if count_matrix.ndim != 2 or count_matrix.shape[0] == 0:
+        raise ValueError("count_matrix must be a non-empty 2D matrix")
+
+    document_frequency = np.count_nonzero(count_matrix, axis=0)
+    return np.log(count_matrix.shape[0] / document_frequency)
 
 
 def compute_tfidf(tf_matrix, idf_vecto):
@@ -50,7 +52,12 @@ def compute_tfidf(tf_matrix, idf_vecto):
 
 
 def cosine_similarity(v1, v2):
-    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
+    v1 = np.asarray(v1, dtype=float)
+    v2 = np.asarray(v2, dtype=float)
+    denominator = np.linalg.norm(v1) * np.linalg.norm(v2)
+    if denominator == 0:
+        return 0.0
+    return np.dot(v1, v2) / denominator
 
 
 vocabulary = build_vocabulary(D)
@@ -170,4 +177,5 @@ IDF giống nhau: True
 TF-IDF giống nhau: True
 Custom cosine: [0.81649658 0.74154115 0.19990265]
 Library cosine: [0.81649658 0.74154115 0.19990265]
-Cosine giống nhau: True"""
+Cosine giống nhau: True
+Các kiểm thử cơ bản của Part E đều đạt."""
