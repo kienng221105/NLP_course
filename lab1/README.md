@@ -5,7 +5,7 @@
 ```text
 lab01/
 ├── README.md
-├── calculations.md
+├── calculations.pdf
 ├── prediction.md
 ├── implementation.py
 ├── experiments.ipynb
