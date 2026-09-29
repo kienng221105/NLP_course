@@ -1,0 +1,61 @@
+Dự đoán,Ngữ cảnh,Từ thực tế,Xác suất,candidate,context,continuation,metric,model,smoothing,split,type,value,Đúng
+,,,,,,,Document,,,,corpus_stat,10000,
+,,,,,,,Câu,,,,corpus_stat,207954,
+,,,,,,,Token,,,,corpus_stat,3634384,
+,,,,,,,Vocabulary,,,,corpus_stat,101836,
+,,,,,,,Tổng n-gram,Unigram,,,ngram_stat,3842338,
+,,,,,,,N-gram phân biệt,Unigram,,,ngram_stat,101837,
+,,,,,,,Chỉ xuất hiện một lần,Unigram,,,ngram_stat,46998,
+,,,,,,,Tổng n-gram,Bigram,,,ngram_stat,3842338,
+,,,,,,,N-gram phân biệt,Bigram,,,ngram_stat,1232091,
+,,,,,,,Chỉ xuất hiện một lần,Bigram,,,ngram_stat,897153,
+,,,,,,,Tổng n-gram,Trigram,,,ngram_stat,3842338,
+,,,,,,,N-gram phân biệt,Trigram,,,ngram_stat,2630557,
+,,,,,,,Chỉ xuất hiện một lần,Trigram,,,ngram_stat,2302033,
+,,,,,,,N-gram chưa gặp,1-gram,,train,unseen_ngram,0,
+,,,,,,,Tổng lần chưa gặp,1-gram,,train,unseen_ngram,0,
+,,,,,,,N-gram chưa gặp,1-gram,,validation,unseen_ngram,1,
+,,,,,,,Tổng lần chưa gặp,1-gram,,validation,unseen_ngram,11400,
+,,,,,,,N-gram chưa gặp,1-gram,,test,unseen_ngram,1,
+,,,,,,,Tổng lần chưa gặp,1-gram,,test,unseen_ngram,9740,
+,,,,,,,N-gram chưa gặp,2-gram,,train,unseen_ngram,0,
+,,,,,,,Tổng lần chưa gặp,2-gram,,train,unseen_ngram,0,
+,,,,,,,N-gram chưa gặp,2-gram,,validation,unseen_ngram,92227,
+,,,,,,,Tổng lần chưa gặp,2-gram,,validation,unseen_ngram,119385,
+,,,,,,,N-gram chưa gặp,2-gram,,test,unseen_ngram,89910,
+,,,,,,,Tổng lần chưa gặp,2-gram,,test,unseen_ngram,112460,
+,,,,,,,N-gram chưa gặp,3-gram,,train,unseen_ngram,0,
+,,,,,,,Tổng lần chưa gặp,3-gram,,train,unseen_ngram,0,
+,,,,,,,N-gram chưa gặp,3-gram,,validation,unseen_ngram,244502,
+,,,,,,,Tổng lần chưa gặp,3-gram,,validation,unseen_ngram,267294,
+,,,,,,,N-gram chưa gặp,3-gram,,test,unseen_ngram,241142,
+,,,,,,,Tổng lần chưa gặp,3-gram,,test,unseen_ngram,258473,
+,,,,,,,,1-gram,mle,train,perplexity,1651.3614049603032,
+,,,,,,,,1-gram,mle,validation,perplexity,inf,
+,,,,,,,,1-gram,mle,test,perplexity,inf,
+,,,,,,,,2-gram,mle,train,perplexity,120.11274806902428,
+,,,,,,,,2-gram,mle,validation,perplexity,inf,
+,,,,,,,,2-gram,mle,test,perplexity,inf,
+,,,,,,,,3-gram,mle,train,perplexity,9.376606914299172,
+,,,,,,,,3-gram,mle,validation,perplexity,inf,
+,,,,,,,,3-gram,mle,test,perplexity,inf,
+,,,,,,,,2-gram,laplace,train,perplexity,5554.695475965989,
+,,,,,,,,2-gram,laplace,validation,perplexity,7918.220273022198,
+,,,,,,,,2-gram,laplace,test,perplexity,7511.22961537223,
+,,,,,,,,3-gram,laplace,train,perplexity,21883.636476119726,
+,,,,,,,,3-gram,laplace,validation,perplexity,39022.28594148694,
+,,,,,,,,3-gram,laplace,test,perplexity,38453.50086498182,
+artwork,wall mounted,with,0.16666666666666666,,,,,,,,next_word,,False
+the,side and,top,0.125,,,,,,,,next_word,,False
+the,not in,alpine,0.2708333333333333,,,,,,,,next_word,,False
+into,you enter,the,0.2631578947368421,,,,,,,,next_word,,False
+2,this stunning,20,0.14285714285714285,,,,,,,,next_word,,False
+of,a few,large,0.06721915285451197,,,,,,,,next_word,,False
+road,a dirt,road,0.6666666666666666,,,,,,,,next_word,,True
+year,the previous,owner,0.056,,,,,,,,next_word,,False
+a,this is,ideal,0.20241691842900303,,,,,,,,next_word,,False
+documentary,award winning,vineyards,0.03896103896103896,,,,,,,,next_word,,False
+the,we choices,the,1.0,,,,,,,,next_word,,True
+,,,,A,machine learning,is useful for nlp,,,,,sentence_ranking,-43.188907036430514,
+,,,,B,machine learning,banana computer quickly,,,,,sentence_ranking,-34.18960181134162,
+,,,,C,machine learning,studies language models,,,,,sentence_ranking,-34.18960181134162,
