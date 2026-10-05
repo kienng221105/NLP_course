@@ -1,5 +1,3 @@
-"""Hàm cho ma trận co-occurrence và các phép so sánh word vector."""
-
 from collections import Counter
 from collections.abc import Iterable, Sequence
 from itertools import islice
