@@ -1,7 +1,5 @@
 Dự đoán trước khi chạy thí nghiệm
 
-Corpus dự kiến: ____________________________________________
-
 1. Những từ gần nhau nhất trong nhóm doctor, physician, hospital, banana, car:
 Dự đoán: doctor, hospital, physician
 Lý do: xuất hiện cùng nhau trong nhiều context 
@@ -21,4 +19,3 @@ Lý do: 1 từ có vecto nhiều chiều hơn => đa dạng context hơn
 Dự đoán: Không
 Lý do: Trong 100 câu có thể 2 từ xuất hiện ít và không cùng context với nhau.  
 Độ tin cậy: 95%
-Sau khi chạy: _____________________________________________
