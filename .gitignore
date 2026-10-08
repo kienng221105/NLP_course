@@ -4,3 +4,6 @@ lab1/from_failure_to_next.md
 W2.pdf
 *.svg
 W3.pdf
+W4.pdf
+*/__pycache__/
+.csv
