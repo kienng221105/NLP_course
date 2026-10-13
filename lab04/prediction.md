@@ -1,23 +1,9 @@
-Dự đoán trước khi chạy model
+1. TF-IDF + Logistic Regression: dự đoán hoạt động tốt vì review có nhiều từ cảm xúc đặc trưng. Kết quả: validation macro F1 = 0,8940.
 
-Dataset: __________________________ Task: __________________
+2. Average Word2Vec không chắc tốt hơn TF-IDF vì phép lấy trung bình làm mất thứ tự và có thể làm mờ từ quan trọng. Kết quả: validation macro F1 = 0,8589, thấp hơn TF-IDF.
 
-1. TF-IDF + Logistic Regression hoạt động tốt không?
-Dự đoán: __________________________ Lý do: _______________
-Độ tin cậy: _______________________ Sau khi chạy: _________
+3. Vocabulary lớn hơn không đảm bảo accuracy tăng. Kết quả: Với bigram, vocabulary tăng từ 82.646 lên 1.730.488; validation macro F1 tăng nhẹ từ 0,8940 lên 0,8956.
 
-2. Average Word2Vec có chắc chắn tốt hơn TF-IDF không?
-Dự đoán: __________________________ Lý do: _______________
-Độ tin cậy: _______________________ Sau khi chạy: _________
+4. Bỏ stopwords không chắc cải thiện kết quả vì một số từ như “not” có ý nghĩa với cảm xúc.
 
-3. Tăng vocabulary size có chắc chắn tăng accuracy không?
-Dự đoán: __________________________ Lý do: _______________
-Độ tin cậy: _______________________ Sau khi chạy: _________
-
-4. Bỏ stopwords có chắc chắn cải thiện performance không?
-Dự đoán: __________________________ Lý do: _______________
-Độ tin cậy: _______________________ Sau khi chạy: _________
-
-5. Accuracy và F1 có thể cho kết luận khác nhau không?
-Dự đoán: __________________________ Lý do: _______________
-Độ tin cậy: _______________________ Sau khi chạy: _________
+5. Accuracy và F1 có thể cho kết luận khác nhau, nhất là khi các lớp mất cân bằng. Kết quả: Linear SVM đạt validation accuracy 0,8967 và macro F1 0,8967.

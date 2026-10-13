@@ -1,5 +1,6 @@
 """Chuẩn hóa văn bản và chia dữ liệu có stratification cho LAB 04."""
 
+import html
 import re
 from collections.abc import Sequence
 
@@ -10,6 +11,8 @@ def normalize_text(text: str) -> str:
     """Chuẩn hóa chữ hoa và khoảng trắng; giữ nguyên từ phủ định như 'not'."""
     if not isinstance(text, str):
         text = "" if text is None else str(text)
+    text = html.unescape(text)
+    text = re.sub(r"<[^>]+>", " ", text)
     return re.sub(r"\s+", " ", text.strip().lower())
 
 

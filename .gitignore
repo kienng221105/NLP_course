@@ -6,4 +6,6 @@ W2.pdf
 W3.pdf
 W4.pdf
 */__pycache__/
-.csv
+*.csv
+*.png
+evaluate_other_lab/

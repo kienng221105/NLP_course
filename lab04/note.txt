@@ -1,2 +1,0 @@
-chia tỷ lệ train/test/valid (60/20/20)
-sheet để 2026
