@@ -5,7 +5,7 @@ W2.pdf
 *.svg
 W3.pdf
 W4.pdf
+W5.pdf
 */__pycache__/
-*.csv
 *.png
 evaluate_other_lab/
