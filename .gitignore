@@ -6,6 +6,12 @@ W2.pdf
 W3.pdf
 W4.pdf
 W5.pdf
+W6.pdf
+W7.pdf
 */__pycache__/
 *.png
+!lab07/positional_encoding.png
+!lab07/attention_heads.png
+!lab07/learning_curves.png
+!lab07/confusion_matrix.png
 evaluate_other_lab/
